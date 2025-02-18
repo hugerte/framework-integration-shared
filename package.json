@@ -1,0 +1,24 @@
+{
+  "name": "@hugerte/framework-integration-shared",
+  "version": "1.0.0",
+  "description": "Code shared between multiple HugeRTE framework integrations.",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["hugerte"],
+  "license": "MIT",
+  "devDependencies": {
+    "hugerte": "^1.0.4",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "hugerte": "^1.0.4"
+  },
+  "include": [
+    "*.js",
+    "*.d.ts"
+  ],
+  "repository": "https://github.com/hugerte/framework-integration-shared.git"
+}

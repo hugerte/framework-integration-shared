@@ -1,2 +1,4 @@
 # @hugerte/framework-integration-shared
-Code shared between multiple HugeRTE framework integrations like [hugerte-react](https://github.com/hugerte/hugerte-react) and [hugerte-vue](https://github.com/hugerte/hugerte-vue).
+Code shared between multiple HugeRTE framework integrations.
+
+This package is not intended to be used directly in projects other than the HugeRTE framework integrations.
