@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc"
   },
-  "keywords": ["hugerte"],
+  "keywords": [
+    "hugerte"
+  ],
   "license": "MIT",
   "devDependencies": {
     "hugerte": "^1.0.4",
@@ -20,5 +22,8 @@
     "*.js",
     "*.d.ts"
   ],
-  "repository": "https://github.com/hugerte/framework-integration-shared.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugerte/framework-integration-shared.git"
+  }
 }
