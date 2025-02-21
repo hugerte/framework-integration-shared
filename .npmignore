@@ -1,0 +1,5 @@
+src/
+.editorconfig
+*.tgz
+tsconfig.json
+!dist/
