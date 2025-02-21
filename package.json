@@ -1,6 +1,6 @@
 {
   "name": "@hugerte/framework-integration-shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Code shared between multiple HugeRTE framework integrations.",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
