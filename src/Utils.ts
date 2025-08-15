@@ -9,20 +9,10 @@ export const uuid = (prefix: string): string => {
   return prefix + '_' + random + unique + String(time);
 };
 
-export const validEvents = [
-  'Activate',
-  'AddUndo',
-  'BeforeAddUndo',
-  'BeforeExecCommand',
-  'BeforeGetContent',
-  'BeforeRenderUI',
-  'BeforeSetContent',
+export const nativeEvents = [
   'BeforePaste',
   'Blur',
-  'Change',
-  'ClearUndos',
   'Click',
-  'CommentChange', // TODO has not been in angular
   'CompositionEnd',
   'CompositionStart',
   'CompositionUpdate',
@@ -30,26 +20,19 @@ export const validEvents = [
   'Copy',
   'Cut',
   'Dblclick',
-  'Deactivate',
-  'Dirty',
   'Drag',
   'DragDrop',
   'DragEnd',
   'DragGesture',
   'DragOver',
   'Drop',
-  'ExecCommand',
   'Focus',
   'FocusIn',
   'FocusOut',
-  'GetContent',
-  'Hide',
-  'Init',
   'Input',
   'KeyDown',
   'KeyPress',
   'KeyUp',
-  'LoadContent',
   'MouseDown',
   'MouseEnter',
   'MouseLeave',
@@ -57,11 +40,36 @@ export const validEvents = [
   'MouseOut',
   'MouseOver',
   'MouseUp',
+  'Paste',
+  'SelectionChange',
+] as const;
+
+export const customEvents = [
+  'Activate',
+  'AddUndo',
+  'BeforeAddUndo',
+  'BeforeExecCommand',
+  'BeforeGetContent',
+  'BeforeRenderUI',
+  'BeforeSetContent',
+  'Change',
+  'ClearUndos',
+  'CommentChange',
+  'Deactivate',
+  'Dirty',
+  'ExecCommand',
+  'GetContent',
+  'Hide',
+  'IconsLoadError',
+  'Init',
+  'LoadContent',
+  'LanguageLoadError',
+  'ModelLoadError',
   'NodeChange',
   'ObjectResizeStart',
   'ObjectResized',
   'ObjectSelected',
-  'Paste',
+  'PluginLoadError',
   'PostProcess',
   'PostRender',
   'PreProcess',
@@ -69,16 +77,19 @@ export const validEvents = [
   'Redo',
   'Remove',
   'Reset',
-  'ResizeEditor', // TODO only in svelte and angular, not in Vue – add to changelog at least. also check react.
+  'ResizeEditor',
   'SaveContent',
-  'SelectionChange',
   'SetAttrib',
   'SetContent',
   'Show',
+  'SkinLoadError',
   'Submit',
+  'ThemeLoadError',
   'Undo',
-  'VisualAid'
-];
+  'VisualAid',
+] as const;
+
+export const validEvents = [...nativeEvents, ...customEvents] as const;
 
 export const isTextarea = (element?: Element | null): element is HTMLTextAreaElement =>
   element?.tagName.toLowerCase() === 'textarea';
