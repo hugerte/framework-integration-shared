@@ -45,8 +45,10 @@ const CreateScriptLoader = (): ScriptLoader => {
       state.listeners.push(callback);
       if (!doc.getElementById(state.scriptId)) {
         injectScriptTag(state.scriptId, doc, url, () => {
-          state.listeners.forEach((fn) => fn());
+          const listeners = state.listeners;
+          state.listeners = [];
           state.scriptLoaded = true;
+          listeners.forEach((fn) => fn());
         });
       }
     }
